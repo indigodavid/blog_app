@@ -1,14 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Blog App
 
-> This App is a Blog that uses Ruby on Rails
+> This App is a a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. It uses Ruby on Rails as an MVC framework.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby On Rails (RoR)
+- PostegreSQL
+- SASS
 
 ## Live Demo (if available)
 
