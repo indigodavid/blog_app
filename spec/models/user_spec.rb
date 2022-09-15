@@ -5,13 +5,13 @@ RSpec.describe User, type: :model do
 
   subject {User.new(name: 'David')}
 
-  it 'User should not allow empty name' do
+  it 'should not allow empty name' do
     expect(subject).to be_valid
     subject.name = nil
     expect(subject).to_not be_valid
   end
 
-  it 'User PostsCounter should be bigger or equal than 0' do
+  it 'PostsCounter should be bigger or equal than 0' do
     expect(subject.posts_counter).to be >= 0
     subject.posts_counter = -1
     expect(subject).to_not be_valid
@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
     expect(subject).to be_valid
   end
 
-  it 'User LastThreePosts length should be between 0 and 3' do
+  it 'LastThreePosts length should be between 0 and 3' do
     expect(subject.last_three_posts).to be_kind_of Array
     expect(subject.last_three_posts.length).to be_between(0, 3)
   end
