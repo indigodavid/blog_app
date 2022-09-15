@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  # Create post
 
-  subject {Post.create(title: 'My first post', author: User.new(name: 'David'))}
+  subject { Post.create(title: 'My first post', author: User.new(name: 'David')) }
 
   it 'should not allow empty title' do
     expect(subject).to be_valid
