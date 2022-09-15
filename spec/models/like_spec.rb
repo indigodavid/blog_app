@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
+  # Create Post and users to add Likes
   new_post = Post.create(title: 'My first post', author: User.create(name: 'David'))
   other_user = User.create(name: 'Elson')
   subject { Like.create(author: other_user, post: new_post) }
