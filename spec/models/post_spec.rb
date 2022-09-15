@@ -7,13 +7,17 @@ RSpec.describe Post, type: :model do
 
   it 'should not allow empty title' do
     expect(subject).to be_valid
-    subject.name = nil
+    subject.title = nil
     expect(subject).to_not be_valid
   end
 
   it 'title should not exceed 250 characters' do
     expect(subject).to be_valid
-    subject.name = 237.times subject.name.concat('a') 
+    new_title = ''
+    251.times do
+      new_title.concat('a')
+    end
+    subject.title = new_title
     expect(subject).to_not be_valid
   end
 
