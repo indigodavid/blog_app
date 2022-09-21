@@ -1,17 +1,9 @@
-<h1>Post</h1>
-<p>Here is post of a given user given its id</p>
-
 <div class="detailed_post">
   <div class="post__container">
-    <div class="post__title">Title placeholder by Username placeholder</div>
-    <div class="post__comments_counter">Number of Comments: comments_counter placeholder</div>
-    <div class="post__likes_counter">Number of Likes: likes_counter placeholder</div>
+    <div class="post__title"><%= @post.title %> by <%= @post.author.name %></div>
+    <div class="post__comments_counter">Number of Comments: <%= @post.comments_counter %></div>
+    <div class="post__likes_counter">Number of Likes: <%= @post.likes_counter %></div>
   </div>
-  <div class="post__text">Text placeholder</div>
-  <ul class="post_comments">
-    <li class="comment">Username: text placeholder</li>
-  </ul>
-  
+  <div class="post__text"><%= @post.text %></div>
+  <%= render @comments %>
 </div>
-
-<button type="button">Pagination</button>
