@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   after_initialize do |user|
-    user.posts_counter = 0
+    user.posts_counter = user.posts.count
   end
 
   def last_three_posts
