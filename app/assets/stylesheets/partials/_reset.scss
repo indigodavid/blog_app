@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* stylelint-disable-next-line at-rule-no-unknown */
+  @include flex-center-column;
+
+  font-family: $font-body;
+  font-size: 1rem;
+  padding: 5%;
+  background-image: linear-gradient(45deg, $color-accent, darken($color-accent, 25%));
+  background-size: 100vw 100vh;
+}
+
+main {
+  /* stylelint-disable-next-line at-rule-no-unknown */
+  @include flex-center-column;
+
+  background-color: $color-negative;
+  max-width: 65em;
+  width: 100%;
+  padding: 3em 0;
+  border-radius: 1em;
+  box-shadow: 0.5em 0.5em 1em inset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  font-weight: 700;
+}
+
+a {
+  &,
+  &:hover,
+  &:active,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 0.5s;
+  }
+}
+
+ul {
+  list-style: none;
+}

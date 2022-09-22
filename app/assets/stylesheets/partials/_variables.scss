@@ -1,0 +1,26 @@
+$hue: 218; // blue 218 - pink 320
+$sat: 45;
+$lum: 37;
+$color-accent: hsl($hue, $sat * 1%, $lum * 1%);
+
+$color-negative: #fff;
+$color-primary: #121212;
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@mixin white-rounded-box {
+  width: 50em;
+  max-width: 90%;
+  box-shadow: 0.4em 0.4em 0.8em;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  border: 0.08em solid $color-primary;
+}

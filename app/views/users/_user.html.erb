@@ -1,0 +1,13 @@
+<ul class="users">
+  <li class="user">
+    <%= link_to user_path(user.id) do %>
+      <div class="user__photo">
+        <img src=<%= user.photo %> alt=<%= user.name %>>
+      </div>
+      <div class="user__container">
+        <div class="user__name"><%= user.name %></div>
+        <div class="user__posts_counter">Number of Posts: <%= user.posts_counter %></div>
+      </div>
+    <% end %>
+  </li>
+</ul>
