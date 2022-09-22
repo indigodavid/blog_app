@@ -1,3 +1,7 @@
 <h1>Users</h1>
 <p>Here is the list of users retrieved from the database</p>
-<%= render @users %>
+<% if @users.empty? %>
+  <h2>No users on database</h2>
+<% else %>
+  <%= render @users %>
+<% end %>
