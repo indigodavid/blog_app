@@ -1,5 +1,6 @@
 <h1>User <%= @user.name %></h1>
-<p>Here is the details of a user given its id</p>
+<p>Here are the details of a user given its id</p>
+<%= link_to '< Back to users', users_path %>
 <%= render @user %>
 
 <div class="user__bio">
@@ -7,8 +8,14 @@
   <p><%= @user.bio %></p>
 </div>
 
-<% @user.last_three_posts.each do |post| %>
-  <%= render post %>
+<% if @user.posts.empty? %>
+  <h2>No posts created</h2>
+<% else %>
+  <% @user.last_three_posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+  <%= link_to 'See all posts', user_posts_path(@user.id) %>
 <% end %>
 
-<%= link_to 'See all posts', user_posts_path(@user.id) %>
+
+

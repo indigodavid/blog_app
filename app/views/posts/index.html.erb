@@ -1,7 +1,9 @@
 <h1>Posts</h1>
 <p>Here is a list of posts of a given user</p>
 <%= render @user %>
-
-<%= render @posts %>
-
+<% if @posts.empty? %>
+  <h2>No posts created</h2>
+<% else %>
+  <%= render @posts %>
+<% end %>
 <button type="button">Pagination</button>
