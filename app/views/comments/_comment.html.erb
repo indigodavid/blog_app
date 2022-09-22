@@ -1,3 +1,1 @@
-<ul class="post_comments">
-  <li class="comment"><%= comment.author.name %>: <%= comment.text %></li>
-</ul>
+<li class="comment"><%= link_to comment.author.name, user_path(comment.author_id) %>: <%= comment.text %></li>
