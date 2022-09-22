@@ -1,9 +1,13 @@
 <div class="detailed_post">
-  <div class="post__container">
-    <div class="post__title"><%= @post.title %> by <%= @post.author.name %></div>
-    <div class="post__comments_counter">Number of Comments: <%= @post.comments_counter %></div>
-    <div class="post__likes_counter">Number of Likes: <%= @post.likes_counter %></div>
+  <div class="post__header">
+    <div class="post__title"><%= @post.title %> by <%= link_to @post.author.name, user_path(@post.author_id) %></div>
+    <div class="post__indicators">
+      <div class="post__comments_counter">Comments: <%= @post.comments_counter %></div>
+      <div class="post__likes_counter">Likes: <%= @post.likes_counter %></div>
+    </div>
   </div>
-  <div class="post__text"><%= @post.text %></div>
-  <%= render @comments %>
+  <div class="post__full_text"><%= @post.text %></div>
+  <ul class="post__comments">
+    <%= render @comments %>
+  </ul>
 </div>
