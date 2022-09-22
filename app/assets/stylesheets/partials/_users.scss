@@ -1,0 +1,60 @@
+.user {
+  width: 100%;
+  box-shadow: 0.4em 0.4em 0.8em;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  border: 0.08em solid $color-primary;
+  
+  & > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &s {
+    @include flex-center-column;
+    width: 50em;
+    max-width: 90%;
+  }
+
+  &__photo {
+    aspect-ratio: 1 / 1;
+    width: 9em;
+    border-radius: 50%;
+    border: 0.16em solid $color-primary;
+    display: flex;
+    overflow: hidden;
+
+    & > img {
+      width: 100%;
+      height: auto;
+      place-items: center;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-basis: 60%;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 1em;
+  }
+
+  &__name {
+    font-size: xx-large;
+  }
+
+  &__posts_counter {
+    font-size: small;
+  }
+
+  &__bio {
+    @include white-rounded-box;
+  }
+}
