@@ -7,7 +7,9 @@
 }
 
 body {
+  /* stylelint-disable-next-line at-rule-no-unknown */
   @include flex-center-column;
+
   font-family: $font-body;
   font-size: 1rem;
   padding: 5%;
@@ -16,7 +18,9 @@ body {
 }
 
 main {
+  /* stylelint-disable-next-line at-rule-no-unknown */
   @include flex-center-column;
+
   background-color: $color-negative;
   max-width: 65em;
   width: 100%;

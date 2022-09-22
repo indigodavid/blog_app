@@ -5,7 +5,7 @@
   padding: 1em;
   border-radius: 1em;
   border: 0.08em solid $color-primary;
-  
+
   & > a {
     display: flex;
     flex-direction: row;
@@ -18,7 +18,9 @@
   }
 
   &s {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @include flex-center-column;
+
     width: 50em;
     max-width: 90%;
   }
@@ -55,6 +57,7 @@
   }
 
   &__bio {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @include white-rounded-box;
   }
 }

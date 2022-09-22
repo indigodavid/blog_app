@@ -5,23 +5,23 @@
   padding: 1em;
   border-radius: 1em;
   border: 0.08em solid $color-primary;
-  
+
   & > a {
     display: flex;
-
-    &:hover {
-      opacity: 0.5;
-    }
   }
 
   &s {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @include flex-center-column;
+
     width: 50em;
     max-width: 90%;
   }
 
   &__container {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @include flex-center-column;
+
     align-items: flex-start;
     gap: 1em;
     width: 100%;
@@ -81,4 +81,8 @@
     color: $color-accent;
     text-decoration: underline;
   }
+}
+
+.post > a:hover {
+  opacity: 0.5;
 }

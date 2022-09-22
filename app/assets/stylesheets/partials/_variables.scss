@@ -6,6 +6,7 @@ $color-accent: hsl($hue, $sat * 1%, $lum * 1%);
 $color-negative: #fff;
 $color-primary: #121212;
 
+/* stylelint-disable-next-line at-rule-no-unknown */
 @mixin flex-center-column {
   display: flex;
   flex-direction: column;
@@ -13,6 +14,7 @@ $color-primary: #121212;
   justify-content: center;
 }
 
+/* stylelint-disable-next-line at-rule-no-unknown */
 @mixin white-rounded-box {
   width: 50em;
   max-width: 90%;
