@@ -54,3 +54,38 @@ a {
 ul {
   list-style: none;
 }
+
+.alert {
+  color: $color-primary;
+  border: solid green 0.2em;
+  border-radius: 0.8em;
+  padding: 0.8em;
+
+  &.success {
+    background-color: lightgreen;
+    border-color: green;
+  }
+
+  &.error {
+    background-color: lightcoral;
+    border-color: red;
+    font-weight: bold;
+  }
+}
+
+textarea {
+  width: 90%;
+  height: 10em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form > div {
+  padding: 1em;
+  border-radius: 1em;
+  border: 0.1em $color-accent solid;
+}
