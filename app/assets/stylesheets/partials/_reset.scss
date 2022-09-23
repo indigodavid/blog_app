@@ -82,6 +82,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-width: 90%;
+  width: 50em;
 }
 
 form > div {
