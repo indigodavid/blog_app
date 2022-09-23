@@ -1,6 +1,9 @@
 <h1>Posts</h1>
 <p>Here is a list of posts of a given user</p>
 <%= render @user %>
+<div class="user__new_post">
+  <h3><%= link_to 'Create a new post', new_user_post_path(@user.id) %></h3>
+</div>
 <% if @posts.empty? %>
   <h2>No posts created</h2>
 <% else %>
