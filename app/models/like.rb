@@ -4,7 +4,7 @@ class Like < ApplicationRecord
 
   after_save :update_likes_counter
 
-  validates :author, uniqueness: {scope: :post}
+  validates :author, uniqueness: { scope: :post }
 
   def update_likes_counter
     post.update(likes_counter: post.likes.count)

@@ -8,7 +8,7 @@ RSpec.describe Like, type: :model do
 
   it 'UpdatesLikesCounter increments post likes_counter' do
     expect(subject.post.likes_counter).to be 1
-    Like.create(author: subject.author, post: subject.post)
+    Like.create(author: subject.post.author, post: subject.post)
     expect(subject.post.likes_counter).to be 2
   end
 end
