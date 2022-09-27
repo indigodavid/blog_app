@@ -29,3 +29,9 @@ RSpec.describe User, type: :system do
       expect(page).to have_content("Number of Posts: #{@first_user.posts_counter}")
       expect(page).to have_content("Number of Posts: #{@second_user.posts_counter}")
     end
+    it 'when a user is clicked, it redirects to that user\'s show page.' do
+      click_link("userlink-#{@third_user.id}")
+      expect(page).to have_current_path(user_path(@third_user))
+    end
+  end
+end
