@@ -42,13 +42,13 @@ RSpec.describe Post, type: :system do
       expect(page).to have_content(@first_post.text)
     end
 
-    it 'displays the username of the commentors' do
+    it 'displays the username of the commenters' do
       expect(page).to have_content(@second_comment.author.name)
       expect(page).to have_content(@first_comment.author.name)
       expect(page).to have_content(@last_comment.author.name)
     end
 
-    it 'displays the username of the commentors' do
+    it 'displays the text of the comments' do
       expect(page).to have_content(@second_comment.text)
       expect(page).to have_content(@first_comment.text)
       expect(page).to have_content(@last_comment.text)
