@@ -15,3 +15,9 @@ RSpec.describe User, type: :system do
       @fourth_post = Post.create(author: @first_user, title: 'Hello', text: 'This is my fourth post')
       visit root_path
     end
+    it 'displays the username of all other users' do
+      expect(page).to have_content(@first_user.name)
+      expect(page).to have_content(@second_user.name)
+      expect(page).to have_content(@third_user.name)
+      expect(page).to have_content(@fourth_user.name)
+    end
