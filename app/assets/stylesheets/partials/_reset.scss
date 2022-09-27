@@ -55,7 +55,7 @@ ul {
   list-style: none;
 }
 
-.alert {
+.box-alert {
   color: $color-primary;
   border: solid green 0.2em;
   border-radius: 0.8em;
@@ -66,10 +66,16 @@ ul {
     border-color: green;
   }
 
-  &.error {
+  &.error,
+  &.alert {
     background-color: lightcoral;
     border-color: red;
     font-weight: bold;
+  }
+
+  &.notice {
+    background-color: lightgoldenrodyellow;
+    border-color: orange;
   }
 }
 
