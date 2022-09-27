@@ -25,3 +25,7 @@ RSpec.describe User, type: :system do
       expect(page).to have_css("img[src*='#{@first_photo}']")
       expect(page).to have_css("img[src*='#{@second_photo}']")
     end
+    it 'displays the number of posts the user has written.' do
+      expect(page).to have_content("Number of Posts: #{@first_user.posts_counter}")
+      expect(page).to have_content("Number of Posts: #{@second_user.posts_counter}")
+    end
