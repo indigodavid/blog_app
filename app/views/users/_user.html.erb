@@ -1,6 +1,6 @@
 <ul class="users">
   <li class="user">
-    <%= link_to user_path(user.id) do %>
+    <%= link_to user_path(user.id), id: "userlink-#{user.id}" do %>
       <div class="user__photo">
         <img src=<%= user.photo %> alt=<%= user.name %>>
       </div>
