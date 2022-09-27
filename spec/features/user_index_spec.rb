@@ -21,3 +21,7 @@ RSpec.describe User, type: :system do
       expect(page).to have_content(@third_user.name)
       expect(page).to have_content(@fourth_user.name)
     end
+    it 'displays the user\'s profile picture.' do
+      expect(page).to have_css("img[src*='#{@first_photo}']")
+      expect(page).to have_css("img[src*='#{@second_photo}']")
+    end
