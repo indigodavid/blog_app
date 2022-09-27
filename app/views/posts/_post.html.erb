@@ -1,6 +1,6 @@
 <ul class="posts">
   <li class="post">
-    <%= link_to user_post_path(post.author_id, post.id) do %>
+    <%= link_to user_post_path(post.author_id, post.id), id: "postlink-#{post.id}" do %>
       <div class="post__container">
         <div class="post__title"><%= post.title %></div>
         <div class="post__text"><%= post.text %></div>

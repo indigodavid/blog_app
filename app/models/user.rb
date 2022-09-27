@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   def last_three_posts
-    Post.where(author: self).order(created_at: :desc).first(3)
+    Post.includes([:comments]).where(author: self).order(created_at: :desc).first(3)
   end
 end
