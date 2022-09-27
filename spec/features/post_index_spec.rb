@@ -21,6 +21,46 @@ RSpec.describe Post, type: :system do
       visit user_posts_path(@first_user.id)
     end
 
-    
+    it 'displays the user\'s profile picture.' do
+      expect(page).to have_css("img[src*='#{@new_photo}']")
+    end
+
+    it 'displays the user\'s username.' do
+      expect(page).to have_content(@first_user.name)
+    end
+
+    it 'displays the number of posts the user has written.' do
+      expect(page).to have_content("Number of Posts: #{@first_user.posts_counter}")
+    end
+
+    it 'displays a post\'s title.' do
+      expect(page).to have_content(@first_post.title)
+    end
+
+    it 'displays some of the post\'s body.' do
+      expect(page).to have_content(@first_post.text)
+    end
+
+    it 'displays the first comments on a post.' do
+      expect(page).to have_content(@second_comment.text)
+      expect(page).to_not have_content(@first_comment.text)
+    end
+
+    it 'displays how many comments a post has.' do
+      expect(page).to have_content("Comments: #{@first_post.comments_counter}")
+    end
+
+    it 'displays how many likes a post has.' do
+      expect(page).to have_content("Likes: #{@first_post.likes_counter}")
+    end
+
+    it 'displays a section for pagination if there are more posts than fit on the view.' do
+      expect(page).to have_button('Pagination')
+    end
+
+    it 'when a post is clicked, it redirects to that post\'s show page.' do
+      click_link("postlink-#{@first_post.id}")
+      expect(page).to have_current_path(user_post_path(@first_user, @first_post))
+    end
   end
 end
