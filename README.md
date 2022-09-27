@@ -50,6 +50,13 @@ Then browse http://localhost:3000
 - Twitter: [![Twitter Badge](https://img.shields.io/badge/-indigo1987-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/indigo1987)
 - LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-davidveracastillo-white?logo=LinkedIn&logoColor=1DA1F2&style=plastic)](https://linkedin.com/in/david-vera-castillo-001b5756/)
 
+👤 **Mauricio Cantillo Moreno**
+
+- GitHub: [![GitHub Badge](https://img.shields.io/badge/-Andyveloper-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/Andyveloper)
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-MauroCantillo_-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/MauroCantillo_)
+- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-mauricio_cantillo_moreno-white?logo=LinkedIn&logoColor=1DA1F2&style=plastic)](https://linkedin.com/in/mauricio-cantillo-moreno/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
