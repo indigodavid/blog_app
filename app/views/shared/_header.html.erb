@@ -1,0 +1,29 @@
+<header>
+  <div>
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.png', class: 'logo' %>
+    <% end %>
+  </div>
+  <nav>
+    <ul>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to user_path(current_user) do %>
+            <%= icon('fa-solid', 'user', class:"fa-shake") %> My Profile
+          <% end %>
+        </li>
+        <li>
+          <%= button_to destroy_user_session_path, method: :delete do %>
+            <%= icon('fa-solid', 'right-from-bracket', class:"fa-fade") %> Logout
+          <% end %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to new_user_session_path do %>
+            <%= icon('fa-solid', 'desktop', class:"fa-fade") %> Sign in
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
