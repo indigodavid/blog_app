@@ -148,7 +148,9 @@ nav {
     justify-content: flex-end;
     align-items: center;
 
-    & a {
+    & a:hover,
+    & a:active,
+    & a:visited {
       text-decoration: underline;
     }
   }

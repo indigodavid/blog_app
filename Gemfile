@@ -73,7 +73,7 @@ group :development do
 
   # Gem for sending confirmation emails on development
   gem 'letter_opener'
-  
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
