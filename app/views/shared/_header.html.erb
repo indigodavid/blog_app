@@ -17,6 +17,12 @@
             <%= icon('fa-solid', 'right-from-bracket', class:"fa-fade") %> Logout
           <% end %>
         </li>
+      <% else %>
+        <li>
+          <%= link_to new_user_session_path do %>
+            <%= icon('fa-solid', 'desktop', class:"fa-fade") %> Sign in
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </nav>
