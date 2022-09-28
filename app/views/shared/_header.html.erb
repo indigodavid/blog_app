@@ -5,6 +5,19 @@
     <% end %>
   </div>
   <nav>
-
+    <ul>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to user_path(current_user) do %>
+            <%= icon('fa-solid', 'user', class:"fa-shake") %> My Profile
+          <% end %>
+        </li>
+        <li>
+          <%= button_to destroy_user_session_path, method: :delete do %>
+            <%= icon('fa-solid', 'right-from-bracket', class:"fa-fade") %> Logout
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   </nav>
 </header>
