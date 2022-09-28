@@ -11,9 +11,10 @@
   </head>
 
   <body>
+    <%= render 'shared/header' %>
     <main>
       <% flash.each do |type, msg| %>
-        <div class="alert <%= type %>">
+        <div class="box-alert <%= type %>">
           <%= msg %>
         </div>
       <% end %>
