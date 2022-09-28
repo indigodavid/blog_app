@@ -12,7 +12,7 @@ body {
 
   font-family: $font-body;
   font-size: 1rem;
-  padding: 5%;
+  padding: 0;
   background-image: linear-gradient(45deg, $color-accent, darken($color-accent, 25%));
   background-size: 100vw 100vh;
 }
@@ -27,6 +27,7 @@ main {
   padding: 3em 0;
   border-radius: 1em;
   box-shadow: 0.5em 0.5em 1em inset;
+  margin-top: 2em;
 }
 
 h1,
@@ -96,4 +97,68 @@ form > div {
   padding: 1em;
   border-radius: 1em;
   border: 0.1em $color-accent solid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6em;
+  padding: 1em;
+  width: 100%;
+  inset: 0 0;
+  background-color: $color-negative;
+
+  & > * {
+    max-height: 100%;
+    display: flex;
+    flex: 15em 1 1;
+  }
+}
+
+input {
+  font-size: 1rem;
+}
+
+button,
+input:is([type="button"], [type="submit"], [type="reset"]) {
+  appearance: none;
+  box-shadow: 0.2em 0.2em 0.4em;
+  font-size: 0.8rem;
+  color: $color-negative;
+  background-color: $color-accent;
+  border: 0.16em $color-accent solid;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+nav {
+  flex-basis: 20em;
+  justify-content: flex-end;
+
+  & > ul {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+    align-items: center;
+
+    & a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.button_to {
+  width: 6em;
+}
+
+.logo {
+  border-radius: 0.5em;
+  box-shadow: 0.08em 0.08em 0.16em;
 }
