@@ -10,6 +10,14 @@
         </div>
       </div>
     <% end %>
+    <% if can? :manage, post %>
+      <ul class=post__tools>
+        <li><%= link_to "Delete Post", user_post_path(post.author, post), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                    } %></li>
+      </ul>
+    <% end %>
     <ul class="post__comments">
     <% if post.comments.empty? %>
       <li>No comments</li>
