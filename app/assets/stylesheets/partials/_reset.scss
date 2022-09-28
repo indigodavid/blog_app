@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fa-animation-iteration-count: 1;
+}
+
 body {
   /* stylelint-disable-next-line at-rule-no-unknown */
   @include flex-center-column;
@@ -49,6 +53,10 @@ a {
     text-decoration: none;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     transition-duration: 0.5s;
+  }
+
+  &:hover {
+    --fa-animation-iteration-count: infinite;
   }
 }
 
@@ -136,6 +144,10 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   border: 0.16em $color-accent solid;
   padding: 0.5em;
   border-radius: 0.5em;
+
+  &:hover {
+    --fa-animation-iteration-count: infinite;
+  }
 }
 
 nav {
