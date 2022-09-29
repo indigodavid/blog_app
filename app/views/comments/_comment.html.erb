@@ -1,1 +1,11 @@
-<li class="comment"><%= link_to comment.author.name, user_path(comment.author_id) %>: <%= comment.text %></li>
+<li class="comment">
+  <%= link_to comment.author.name, user_path(comment.author_id) %>: <%= comment.text %>
+  <% if can? :manage, comment %>
+    <ul class=comment__tools>
+      <li><%= link_to "Delete comment", user_post_comment_path(comment.author, comment.post, comment), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+    </ul>
+  <% end %>
+</li>

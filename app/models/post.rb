@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
-  has_many :likes
-  has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   after_save :update_posts_counter
+  after_destroy :update_posts_counter
 
   validates :title, presence: true
   validates :title, length: { maximum: 250 }
