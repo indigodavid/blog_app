@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes([:comments]).order(created_at: :desc)
+    @posts = @user.posts.includes(%i[author comments]).order(created_at: :desc)
   end
 
   def show
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     @post = @user.posts.create(post_params)
     if @post.save
       flash[:success] = 'Post saved successfully'
-      redirect_to user_posts_path(@user.id)
+      redirect_to user_posts_path(@post.author)
     else
       flash.now[:error] = 'Error: Post could not be saved'
       render :new, status: 422
