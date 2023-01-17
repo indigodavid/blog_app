@@ -9,7 +9,7 @@
       <% if user_signed_in? %>
         <li>
           <%= link_to user_path(current_user) do %>
-            <%= icon('fa-solid', 'user', class:"fa-shake") %> My Profile
+            <%= icon('fa-solid', 'user', class:"fa-shake") %> <%= current_user.name %>
           <% end %>
         </li>
         <li>
